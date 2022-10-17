@@ -1,6 +1,6 @@
 ## Arquitectura de la aplicación
 
-![Arquitectura](Spring Boot and Amazon S3 - Arquitectura.png)
+![Spring Boot and Amazon S3 - Arquitectura](https://user-images.githubusercontent.com/115224035/196198458-b3ed687f-702e-4c54-9ed9-64202603e10a.png)
 
 ## Configuración
 
