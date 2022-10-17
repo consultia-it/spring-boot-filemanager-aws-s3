@@ -1,0 +1,19 @@
+# In order to make calls to the AWS Services the credentials must be configured for the the Amazon SDK. 
+# In order to access S3 service we can configure access key and secret key using yaml or properties files
+document:
+  bucket-name: spring-boot-aws-s3-poc
+cloud:
+  aws:
+    region:
+      auto: false
+      static: eu-west-3
+    credentials:
+      access-key: AKIAUND4E7ESIOKUCP3J
+      secret-key: XXXXXXX
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration

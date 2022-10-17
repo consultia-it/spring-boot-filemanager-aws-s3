@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "71206438-8126-42c9-abfa-35dfe05e2725",
+		"name": "Amazon S3 tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Upload document to S3 bucket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/tmp/batman.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/documents/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"documents",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Get All documents on S3 bucket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/documents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"documents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Download document from S3 bucket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/tmp/batman.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/documents/900c9acc-e6de-45a9-929e-8ea433bc7738.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"documents",
+						"900c9acc-e6de-45a9-929e-8ea433bc7738.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4. Delete document from S3 bucket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/documents/900c9acc-e6de-45a9-929e-8ea433bc7738.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"documents",
+						"900c9acc-e6de-45a9-929e-8ea433bc7738.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Get All documents on S3 bucket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/documents/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"documents",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
